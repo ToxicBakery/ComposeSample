@@ -37,13 +37,13 @@ fun LightThemeNewsStory() {
 @Preview
 @Composable
 fun DarkThemeNewsStory() {
-    Screen()
+    Screen(ScreenModel(1))
 }
 
 @Model
-class ScreenModel {
-
-    private var themeIndex = 0
+class ScreenModel(
+    private var themeIndex: Int = 0
+) {
 
     val theme: MaterialColors
         get() = themeColors[themeIndex % themeColors.size]
